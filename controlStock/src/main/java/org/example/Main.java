@@ -1,8 +1,19 @@
 package org.example;
 
-public class Main {
-    public static void main(String[] args) {
+import org.example.connection.Connection;
+import org.example.interfaz.Menu;
 
-        System.out.println("Hello world!");
+import javax.swing.*;
+import java.sql.SQLException;
+
+
+public class Main {
+    public static void main(String[] args) throws SQLException {
+
+        JFrame menu=new Menu();
+        menu.setVisible(true);
+
+
+
     }
 }
