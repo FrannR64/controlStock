@@ -6,13 +6,13 @@ import java.awt.event.ActionListener;
 import java.sql.SQLException;
 
 public class Menu extends JFrame {
-    private JButton salirButton;
     private JButton ingresarProductoButton;
     private JButton verProductosButton;
     private JPanel panelMenu;
 
-    //paneles
+    //----------------------paneles------------------------------------------
     IngresarProducto ingresarProducto = new IngresarProducto();
+    VerProductos verProductos=new VerProductos();
 
 
     public Menu() throws SQLException {
@@ -30,6 +30,18 @@ public class Menu extends JFrame {
         });
 
 
+        //boton ver productos
+        verProductosButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    verProductos.recargar();
+                } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
+                }
+                verProductos.setVisible(true);
+            }
+        });
     }
 
 }

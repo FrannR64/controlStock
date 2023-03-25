@@ -1,7 +1,7 @@
 package org.example;
 
-import org.example.connection.Connection;
 import org.example.interfaz.Menu;
+import org.example.service.ServiceProducto;
 
 import javax.swing.*;
 import java.sql.SQLException;

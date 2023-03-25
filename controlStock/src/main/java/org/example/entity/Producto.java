@@ -1,16 +1,26 @@
 package org.example.entity;
 
-public class Objeto {
+public class Producto {
+    private int id;
     private int precio;
     private  String Producto;
 
 
-    public Objeto(int precio, String nombre) {
+    public Producto(int id, int precio, String nombre) {
+        this.id=id;
         this.precio = precio;
         this.Producto = nombre;
     }
 
-    public Objeto() {
+    public Producto() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getPrecio() {
